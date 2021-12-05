@@ -287,9 +287,21 @@ img {
   right: 8px;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
 }
-.modal-close:hover .modal-close-icon {
+.modal-close-icon {
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close:hover .modal-close-icon,
+.modal-close:focus .modal-close-icon {
   fill: var(--accent-color);
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .is-hidden {
   visibility: hidden;
@@ -388,6 +400,7 @@ img {
 .check-text {
   display: flex;
   align-items: center;
+  justify-content: center;
 
   font-style: normal;
   font-weight: normal;
@@ -667,8 +680,8 @@ img {
   background: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
-  width: 1600px;
 }
+
 .futter-container {
   display: flex;
 }
@@ -809,6 +822,7 @@ img {
   display: flex;
   align-items: center;
   outline: none;
+  border: none;
 
   background: #2196f3;
   color: #ffffff;
